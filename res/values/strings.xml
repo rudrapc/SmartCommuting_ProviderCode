@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   
+    <string name="app_name">TSProvider</string>
+    <string name="app_label">Transport Service Provider</string>
+	<string name="settings_label">Settings...</string>
+	<string name="service_url_label">Service URL</string>
+	<string name="device_id_label">Device Id</string>
+	<string name="device_name_label">Device Name</string>
+	<string name="direction_name_label">Direction [U(up),D(down)]</string>
+	<string name="time_interval_label">Transmission Frequency (secs)</string>
+    
+	
+</resources>
