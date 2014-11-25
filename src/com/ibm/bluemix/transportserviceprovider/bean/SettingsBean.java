@@ -22,31 +22,31 @@ public class SettingsBean {
 	}
 
 	public String getUrl() {
-		return mUrl;
+		return mUrl.trim();
 	}
 
 	public String getDeviceName() {
-		return mDeviceName;
+		return mDeviceName.trim();
 	}
 
 	public String getDeviceId() {
-		return mDeviceId;
+		return mDeviceId.trim();
 	}
 
 	public String getLat() {
-		return mLat;
+		return mLat.trim();
 	}
 
 	public String getLong() {
-		return mLong;
+		return mLong.trim();
 	}
 
 	public String getDirection() {
-		return mDirection;
+		return mDirection.trim();
 	}
 
 	public String getDeviceType() {
-		return mDeviceType;
+		return mDeviceType.trim();
 	}
 
 	public String toString() {
@@ -57,4 +57,3 @@ public class SettingsBean {
 		return lObject;
 	}
 }
-

@@ -102,10 +102,7 @@ public class TSPMainActivity extends Activity implements LocationListener {
 		// TODO:: Device type will be enhanced later
 		SettingsBean lSetting = new SettingsBean(mServiceUrl, mDeviceId,
 				mDeviceName, mLat, mLong, mDirectionName, "");
-		String lCompleteUrl = getCompleteUrl(lSetting).toString();
-		// Toast.makeText(getBaseContext(), "lCompleteUrl:[ " + lCompleteUrl,
-		// Toast.LENGTH_LONG).show();
-
+		String lCompleteUrl = getCompleteUrl(lSetting).toString().trim();
 		new Connection().execute(new String[] { lCompleteUrl,
 				lSetting.getLat(), lSetting.getLong() });
 	}
@@ -226,7 +223,8 @@ public class TSPMainActivity extends Activity implements LocationListener {
 		lStringBuilder.append("&");
 		lStringBuilder.append("pTm=");
 		lStringBuilder.append(pSetting.getDeviceType());
-		lStringBuilder.append("Oprtn=");
+		lStringBuilder.append("&");
+		lStringBuilder.append("pOprtn=");
 		lStringBuilder.append("Update");
 		return lStringBuilder;
 	}
@@ -242,6 +240,11 @@ public class TSPMainActivity extends Activity implements LocationListener {
 			HttpResponse lResponse = null;
 			try {
 				DefaultHttpClient client = new DefaultHttpClient();
+				/*
+				 * HttpGet lRequest = new HttpGet(
+				 * "http://smartcommbluemixdemo.mybluemix.net/vehicleinfo?pNm=215A&pId=WB24A2392&pLngtd=50.58320543&pLttd=67.44909621&pTrp=U&pTm=&pOprtn=Update"
+				 * );
+				 */
 				HttpGet lRequest = new HttpGet(arg0[0]);
 				mLat = arg0[1];
 				mLong = arg0[2];
